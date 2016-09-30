@@ -312,16 +312,25 @@ public class Principal extends javax.swing.JFrame {
                         aux = 0;
                     } catch (NullPointerException e) {
                         res = JOptionPane.showConfirmDialog(this, "¿Desea Salir?", "Salir", JOptionPane.YES_NO_OPTION);
-                        System.out.println(res);
+
                         if (res == 0) {
                             aux = 1;
                             j = nc;
                             i = nf;
                             sw = false;
+                            JButton botonesH[] = {cmdCrear, cmdLimpiar};
+                            JButton botonesD[] = {cmdLlAutomatico, cmdManual, cmdOperar};
+                            Helper.HabilitarBotones(botonesH);
+                            Helper.DeshabilitarBotones(botonesD);
                             Helper.TablaPorDefecto(tblMatrizInicial);
                             Helper.TablaPorDefecto(tblMatrizFinal);
+
                         } else {
                             aux = 0;
+                            JButton botonesH[] = {cmdOperar, cmdLimpiar};
+                            JButton botonesD[] = {cmdLlAutomatico, cmdManual, cmdCrear};
+                            Helper.HabilitarBotones(botonesH);
+                            Helper.DeshabilitarBotones(botonesD);
                         }
 
                     }
@@ -331,10 +340,6 @@ public class Principal extends javax.swing.JFrame {
 
         }
 
-        JButton botonesH[] = {cmdLimpiar, cmdOperar};
-        JButton botonesD[] = {cmdCrear, cmdLlAutomatico, cmdManual};
-        Helper.HabilitarBotones(botonesH);
-        Helper.DeshabilitarBotones(botonesD);
 
     }//GEN-LAST:event_cmdManualActionPerformed
 
