@@ -242,6 +242,8 @@ public class Principal extends javax.swing.JFrame {
                 JButton botonesD[] = {cmdCrear, cmdOperar};
                 Helper.HabilitarBotones(botonesH);
                 Helper.DeshabilitarBotones(botonesD);
+                txtNumeroColumnas.setEditable(false);
+                txtNumeroFilas.setEditable(false);
             }
         }
     }//GEN-LAST:event_cmdCrearActionPerformed
@@ -282,6 +284,8 @@ public class Principal extends javax.swing.JFrame {
 
         JButton botonesH[] = {cmdCrear, cmdLimpiar};
         JButton botonesD[] = {cmdLlAutomatico, cmdManual, cmdOperar};
+        txtNumeroColumnas.setEditable(false);
+        txtNumeroFilas.setEditable(false);
         Helper.HabilitarBotones(botonesH);
         Helper.DeshabilitarBotones(botonesD);
 
