@@ -284,8 +284,8 @@ public class Principal extends javax.swing.JFrame {
 
         JButton botonesH[] = {cmdCrear, cmdLimpiar};
         JButton botonesD[] = {cmdLlAutomatico, cmdManual, cmdOperar};
-        txtNumeroColumnas.setEditable(false);
-        txtNumeroFilas.setEditable(false);
+        txtNumeroColumnas.setEditable(true);
+        txtNumeroFilas.setEditable(true);
         Helper.HabilitarBotones(botonesH);
         Helper.DeshabilitarBotones(botonesD);
 
